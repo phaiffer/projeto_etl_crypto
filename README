@@ -1,4 +1,38 @@
-🪙 Pipeline de Engenharia de Dados - Top 100 CriptomoedasEste projeto consiste em um pipeline de dados ETL (Extract, Transform, Load) construído em Python. O objetivo é extrair dados de mercado das principais criptomoedas em tempo real, processá-los, armazená-los e gerar infográficos para análise de investimento.🏗️ Arquitetura do ProjetoO fluxo de dados segue as seguintes etapas:Extract (Extração): Coleta dados da API pública da CoinGecko, focando nas Top 100 moedas por capitalização de mercado.Transform (Transformação): Utiliza a biblioteca Pandas para limpar os dados, renomear colunas e formatar tipos de dados.Load (Carga): Armazena os dados processados em um banco de dados local SQLite.Analytics (Visualização): Gera gráficos em PNG usando Matplotlib e Seaborn para insights visuais.🛠️ Tecnologias UtilizadasPython 3.xPandas (Tratamento de dados)Requests (Consumo de API)SQLite (Armazenamento)Matplotlib & Seaborn (Visualização de dados)🚀 Como ExecutarPré-requisitosCertifique-se de ter o Python instalado. Recomenda-se usar um ambiente virtual (.venv).Clone o repositório e instale as dependências:pip install -r requirements.txt
-Execute o Pipeline ETL (Extrair dados):python etl_crypto.py
-Isso criará o arquivo dados_cripto.db.Gere os Infográficos:python visualizacao.py
-Isso criará uma pasta infograficos/ com as imagens geradas.📊 Estrutura dos DadosA tabela historico_criptomoedas contém:symbol: Símbolo (ex: btc, eth).preco_atual_usd: Valor atual.capitalizacao_mercado: Indicador de tamanho e estabilidade da moeda.volume_total: Indicador de liquidez (facilidade de compra/venda).📈 Exemplos de Análises GeradasTop 10 Market Cap: Identifica as moedas "Blue Chip" do mercado.Volume vs Preço: Ajuda a identificar moedas com alta atividade de negociação (oportunidades ou alta volatilidade).Desenvolvido como parte do portfólio de Engenharia de Dados.
+---
+
+# 🚀 Pipeline de Engenharia de Dados — Top 100 Criptomoedas
+
+Este projeto consiste em um pipeline de dados **ETL (Extract, Transform, Load)** construído em **Python**.  
+O objetivo é **extrair dados de mercado** das principais criptomoedas e gerar **infográficos** com os resultados.
+
+---
+
+## ⚙️ Etapas do Pipeline
+
+1️⃣ **Executar o Pipeline ETL (Extrair dados)**  
+```bash
+python etl_crypto.py
+```
+
+🔹 Isso criará o arquivo `dados_crypto.db`.
+
+2️⃣ **Gerar os Infográficos**  
+```bash
+python visualizacao.py
+```
+
+🔹 Isso criará a pasta `infograficos/` com as imagens geradas.
+
+---
+
+## 📊 Estrutura dos Dados
+
+A tabela `historico_criptomoedas` contém:
+
+| Campo                | Descrição                                 |
+|---------------------|--------------------------------------------|
+| `symbol`            | Símbolo da criptomoeda (ex: BTC, ETH)      |
+| `preco_atual_usd`   | Valor atual em dólares                     |
+| `capitalizacao_mercado` | Indicador de capitalização de mercado |
+
+---
